@@ -6,19 +6,15 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
+  function onclickbutton() {
+    setCount(count + 1);
+  }
+
   return (
     <div>
-      <Button count={count} setCount={setCount}></Button>
+      <button onClick={onclickbutton}>count={count}</button>
     </div>
   );
-}
-function Button(props) {
-  function onbuttonClick() {
-    // eslint-disable-next-line react/prop-types
-    props.setCount(props.count + 1);
-  }
-  // eslint-disable-next-line react/prop-types
-  return <button onClick={onbuttonClick}>Counter {props.count}</button>;
 }
 
 export default App;
