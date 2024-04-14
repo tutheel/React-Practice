@@ -6,13 +6,13 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
-  function onclickbutton() {
+  function onclickHandler() {
     setCount(count + 1);
   }
 
   return (
     <div>
-      <button onClick={onclickbutton}>count={count}</button>
+      <button onClick={onclickHandler}>count={count}</button>
     </div>
   );
 }
